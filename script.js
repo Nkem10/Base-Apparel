@@ -1,23 +1,28 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const form = document.getElementById("subscribe-form");
-    const emailInput = document.getElementById("email");
-    const errorMessage = document.getElementById("error-message");
+// script.js
 
-    form.addEventListener("submit", function(event) {
-        event.preventDefault();
-        const emailValue = emailInput.value.trim();
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+// Select form and input elements
+const form = document.querySelector("form");
+const emailInput = document.querySelector("#email");
+const errorMessage = document.querySelector(".error-message");
 
-        if (!emailValue) {
-            errorMessage.textContent = "Please enter an email address.";
-            errorMessage.style.display = "block";
-        } else if (!emailPattern.test(emailValue)) {
-            errorMessage.textContent = "Please enter a valid email address.";
-            errorMessage.style.display = "block";
-        } else {
-            errorMessage.style.display = "none";
-            // Handle successful submission (e.g., sending to server)
-            alert("Subscription successful!");
-        }
-    });
+// Function to validate the email using a regex pattern
+function validateEmail(email) {
+  const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return pattern.test(email);
+}
+
+// Event listener for form submission
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  const email = emailInput.value.trim();
+
+  // Validate email and show error if invalid
+  if (email === "" || !validateEmail(email)) {
+    errorMessage.textContent = "Please enter a valid email address.";
+    emailInput.classList.add("error-border");
+  } else {
+    errorMessage.textContent = "";
+    emailInput.classList.remove("error-border");
+    alert("Email successfully submitted!");
+  }
 });
