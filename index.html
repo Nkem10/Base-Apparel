@@ -1,30 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link href="index.css" rel="stylesheet" />
-  <title>Frontend Mentor | Base Apparel coming soon page</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base Apparel - Coming Soon</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
 </head>
 <body>
+    <div class="container">
+        <h1>We're coming soon</h1>
+        <p>Subscribe to our newsletter and get notified when we launch.</p>
+        <form id="subscribe-form">
+            <input type="email" id="email" placeholder="Email Address" required>
+            <button type="submit">Subscribe</button>
+            <span id="error-message" class="hidden">Please provide a valid email address.</span>
+        </form>
+    </div>
 
-  We're here!
-
-  Hello fellow shoppers! We're displaying our new fashion store. 
-  Add your email below to stay up-to-date with announcements and our launch deals.
-
-  Please enter Email Address
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
-
-  <script src="index.js"></script>
+    <script src="script.js"></script> <!-- Link to your JavaScript file -->
 </body>
 </html>
