@@ -1,32 +1,48 @@
-/* 
-    Desaturated Red: hsl(0, 36%, 70%)
-    Soft Red: hsl(0, 93%, 68%)
-
-Neutral
-
-    Dark Grayish Red: hsl(0, 6%, 24%)
-
-Gradients
-
-    Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
-    Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)
- */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Base Styles */
 body {
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 16px
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
 }
 
-.attribution {
-  font size: 11px;
-  text-align: center;
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
-.attribution a {
-  color: hsl (228, 45%, 44%);
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Button Styles */
+button {
+    padding: 0.5rem 1rem;
+    background-color: #6C63FF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5753d1;
+}
+
+/* Form Styles */
+input[type="email"] {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 1rem;
 }
